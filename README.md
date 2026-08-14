@@ -54,6 +54,31 @@ The raw export required minimal cleaning, but I validated it rather than assumin
   sqrt(252) trading days)
 - Monthly and yearly resampled returns
 
+Chart 1 — chart1_full_history.png
+Question it answers: How has AAPL grown over its entire trading history?
+
+![AAPL Closing Price 1980-2024, Log Scale](chart1_full_history.png)
+
+Chart 2 — chart2_moving_averages.png
+Question it answers: Is the current price trend genuine and sustained, or short-term noise?
+
+![AAPL Closing Price with 7-Day and 30-Day Moving Averages](chart2_moving_averages.png)
+
+Chart 3 — chart3_volume.png
+Question it answers: Is trading activity increasing or decreasing, and does it line up with major price moves?
+
+![AAPL Daily Trading Volume](chart3_volume.png)
+
+Chart 4 — chart4_monthly_returns.png
+Question it answers: Which months were strongest and weakest, and is there a seasonal pattern?
+
+![AAPL Monthly Returns 2020-2024](chart4_monthly_returns.png)
+
+Chart 5 — chart5_volatility.png
+Question it answers: How risky is this stock right now compared to its own history?
+
+![AAPL 30-Day Rolling Annualized Volatility](chart5_volatility.png)
+
 ## Key Findings
 
 - AAPL grew from a split-adjusted fraction of a dollar at IPO to over $230 by late 2024, with
