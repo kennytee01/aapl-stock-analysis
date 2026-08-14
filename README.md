@@ -24,9 +24,9 @@ through November 29, 2024: 11,084 trading days. Prices are split and dividend ad
 **On retrieval method:** the task specification for this week calls for pulling the data
 directly with the `yfinance` Python library. My working environment while building this
 notebook did not have outbound access to Yahoo Finance's API, so I sourced the equivalent data
-as a CSV export of the same Yahoo Finance dataset (`AAPL_1980_2024_raw.csv`). The `yfinance`
-code is included in the notebook's first code cell and is what produces the same data when run
-with a normal internet connection.
+as a CSV export of the same Yahoo Finance dataset (`data/AAPL_1980_2024_raw.csv`). The
+`yfinance` code is included in the notebook's first code cell and is what produces the same
+data when run with a normal internet connection.
 
 Detailed feature engineering and analysis is scoped to 2020-2024, a five-year window that
 covers the COVID-19 crash, the 2021 rally, the 2022 rate-driven drawdown and the 2023-2024
@@ -54,31 +54,6 @@ The raw export required minimal cleaning, but I validated it rather than assumin
   sqrt(252) trading days)
 - Monthly and yearly resampled returns
 
-Chart 1 — chart1_full_history.png
-Question it answers: How has AAPL grown over its entire trading history?
-
-![AAPL Closing Price 1980-2024, Log Scale](chart1_full_history.png)
-
-Chart 2 — chart2_moving_averages.png
-Question it answers: Is the current price trend genuine and sustained, or short-term noise?
-
-![AAPL Closing Price with 7-Day and 30-Day Moving Averages](chart2_moving_averages.png)
-
-Chart 3 — chart3_volume.png
-Question it answers: Is trading activity increasing or decreasing, and does it line up with major price moves?
-
-![AAPL Daily Trading Volume](chart3_volume.png)
-
-Chart 4 — chart4_monthly_returns.png
-Question it answers: Which months were strongest and weakest, and is there a seasonal pattern?
-
-![AAPL Monthly Returns 2020-2024](chart4_monthly_returns.png)
-
-Chart 5 — chart5_volatility.png
-Question it answers: How risky is this stock right now compared to its own history?
-
-![AAPL 30-Day Rolling Annualized Volatility](chart5_volatility.png)
-
 ## Key Findings
 
 - AAPL grew from a split-adjusted fraction of a dollar at IPO to over $230 by late 2024, with
@@ -105,17 +80,21 @@ Question it answers: How risky is this stock right now compared to its own histo
 ## Repository Structure
 
 ```
-aapl-stock-analysis/
+AAPL-Stock-Analysis/
 ├── README.md
-├── AAPL_Stock_Analysis.ipynb          Full analysis: loading, cleaning, feature engineering,
+├── notebook/
+│   └── AAPL_Stock_Analysis.ipynb      Full analysis: loading, cleaning, feature engineering,
 │                                        time-series analysis, 5 visualizations, findings
-├── AAPL_1980_2024_raw.csv             Raw daily OHLCV data, 1980-2024
-├── AAPL_Insight_Summary.docx          1-2 page summary report
-├── chart1_full_history.png            Full 44-year closing price, log scale
-├── chart2_moving_averages.png         Closing price with 7-day and 30-day moving averages
-├── chart3_volume.png                  Daily trading volume with 30-day average
-├── chart4_monthly_returns.png         Monthly returns, 2020-2024
-└── chart5_volatility.png              30-day rolling annualized volatility
+├── data/
+│   └── AAPL_1980_2024_raw.csv         Raw daily OHLCV data, 1980-2024
+├── charts/
+│   ├── chart1_full_history.png        Full 44-year closing price, log scale
+│   ├── chart2_moving_averages.png     Closing price with 7-day and 30-day moving averages
+│   ├── chart3_volume.png              Daily trading volume with 30-day average
+│   ├── chart4_monthly_returns.png     Monthly returns, 2020-2024
+│   └── chart5_volatility.png          30-day rolling annualized volatility
+└── reports/
+    └── AAPL_Insight_Summary.docx      1-2 page summary report
 ```
 
 ## Tools Used
@@ -126,3 +105,4 @@ Python, Pandas, NumPy, Matplotlib, Jupyter Notebook.
 
 Timothy Kehinde Promise
 Data Analyst Intern, AnalystLab Africa
+[Portfolio](https://bit.ly/4qIn19W)
